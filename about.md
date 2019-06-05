@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I am a undergraduate student at the University of Maryland, College Park.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Nothing more.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[yang7832@umd.edu](mailto:yang7832@umd.edu)
