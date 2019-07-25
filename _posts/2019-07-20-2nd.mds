@@ -99,7 +99,7 @@ In phase 3, I will be covering the following works:
 
 3, test the codes on different languages
 
- - Theoretically, EAST and tesserect works across all languages. I needs to be tested, and implement a machenism to switch to different detection models.
+ - theoretically, EAST and tesserect works across all languages. I needs to be tested, and implement a machenism to switch to different detection models.
 
 4, format the results into Red Hen requirements.
 
