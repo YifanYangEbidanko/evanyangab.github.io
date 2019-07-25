@@ -90,15 +90,16 @@ The result.log file also records the detected text area in each frame.
 ## phase 3
 
 In phase 3, I will be covering the following works:
-1, pack the codes into a singularity container
+
+ - 1, pack the codes into a singularity container. In phase 1 I had a lot of issues trying to invoke a GPU node inside a singularity container, with a lot of attempts. Since now the works does not strongly require a GPU, but rather just cpu, I have plenty of experience with that.
+
 2, test different models of EAST
+
+ - Right now the major issue is the bounding box of EAST is not so perfect. One solution is to see if other pretrained models are better, and another is to change the way similarity detection is working. right now it is based on both location and text, by emphasizing it more on location and make some other judgements it should also work well.
+
 3, test the codes on different languages
+
+ - Theoretically, EAST and tesserect works across all languages. I needs to be tested, and implement a machenism to switch to different detection models.
+
 4, format the results into Red Hen requirements.
-
-
-
-
-# things to add
-
-issues with tesserect OCR
 
