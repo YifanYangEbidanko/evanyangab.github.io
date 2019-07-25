@@ -7,7 +7,7 @@ For the 2nd phase, almost everything is finished, including all the sub-modules 
 
 ### Detection
 
-I was planing on using mask rcnn as the detection model, however due to training errors and server errors I couldn't finish the training. So I worked on some backup plans. The first attemp was using cv2 and some other modules, with frames of this video (https://www.youtube.com/watch?v=4oml2IoZf70&t=1s) as input (image has been processed so that it is better for the model to do detection):
+I was planing on using mask rcnn as the detection model, however due to training errors and server errors I couldn't finish the training. So I worked on some backup plans. The first attemp was using cv2 and some other modules, with frames of [this video] (https://www.youtube.com/watch?v=4oml2IoZf70) as input (image has been processed so that it is better for the model to do detection):
 
 ![input image](/images/outfile.jpg "input image")
 
@@ -46,7 +46,7 @@ The EAST detection code is hosted on a server, which is lunched localy, then the
 
 ## Using EAST in this module
 
-To use EAST detection in this module, make a clone of this https://github.com/HaozhengLi/EAST_ICPR repository, and download a pretrained model (or train it yourself) into /models, 
+To use EAST detection in this module, make a clone of this [repo](https://github.com/HaozhengLi/EAST_ICPR), and download a pretrained model (or train it yourself) into /models, 
 
 replace the run_demo_server.py with the file that has the exact same name in the repo for this project,
 
@@ -70,7 +70,6 @@ This is done through dynamic programming and cacheing so that the process is fas
 
 ```python
 text_merge.merge_text(['read','reaed', 'rfeaed'])
-
 -> 'reaed'
 ```
 ### Test Result
@@ -90,16 +89,13 @@ The result.log file also records the detected text area in each frame.
 ## phase 3
 
 In phase 3, I will be covering the following works:
-
- - 1, pack the codes into a singularity container. In phase 1 I had a lot of issues trying to invoke a GPU node inside a singularity container, with a lot of attempts. Since now the works does not strongly require a GPU, but rather just cpu, I have plenty of experience with that.
+- 1, pack the codes into a singularity container. In phase 1 I had a lot of issues trying to invoke a GPU node inside a singularity container, with a lot of attempts. Since now the works does not strongly require a GPU, but rather just cpu, I have plenty of experience with that.
 
 2, test different models of EAST
-
- - Right now the major issue is the bounding box of EAST is not so perfect. One solution is to see if other pretrained models are better, and another is to change the way similarity detection is working. right now it is based on both location and text, by emphasizing it more on location and make some other judgements it should also work well.
+- Right now the major issue is the bounding box of EAST is not so perfect. One solution is to see if other pretrained models are better, and another is to change the way similarity detection is working. right now it is based on both location and text, by emphasizing it more on location and make some other judgements it should also work well.
 
 3, test the codes on different languages
-
- - theoretically, EAST and tesserect works across all languages. I needs to be tested, and implement a machenism to switch to different detection models.
+- theoretically, EAST and tesserect works across all languages. I needs to be tested, and implement a machenism to switch to different detection models.
 
 4, format the results into Red Hen requirements.
 
