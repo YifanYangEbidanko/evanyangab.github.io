@@ -68,34 +68,3 @@ For text merging, the workflow is to first detect similarity based on context an
 
 This is done through dynamic programming and cacheing so that the process is fast enough. 
 
-```python
-text_merge.merge_text(['read','reaed', 'rfeaed'])
--> 'reaed'
-```
-### Test Result
-
-Then collect the results and order them by frames. For test purposes I lower cased all of them. The sample result from the first 500 frames is stored in result.log under the repo. 
-
-The problem that it is occuring is the bounding box not perfect enough for the tesserect OCR to pick up and recognize, and due to the merging logic, texts that does not have enough similarities from the previous frame will be considered as a different object. Thus, there are situations (for now) where some texts should be considered as continus are seperated.
-
-Another issue is also related to this, which I had already stated in the section "Problem with Tesseract OCR and EAST". Tesseract is very picky with the text area. However, by manually bounding the box wider and removing the overlapped detection I got perfect result.
-
-```python
-[{'text': 'bloomberg', 'start_frame': 1, 'end_frame': 499}, {'text': 'president trump speaks in the rose garden', 'start_frame': 1, 'end_frame': 30, }]
-```
-
-The result.log file also records the detected text area in each frame. 
-
-## phase 3
-
-In phase 3, I will be covering the following works:
-- 1, pack the codes into a singularity container. In phase 1 I had a lot of issues trying to invoke a GPU node inside a singularity container, with a lot of attempts. Since now the works does not strongly require a GPU, but rather just cpu, I have plenty of experience with that.
-
-2, test different models of EAST
-- Right now the major issue is the bounding box of EAST is not so perfect. One solution is to see if other pretrained models are better, and another is to change the way similarity detection is working. right now it is based on both location and text, by emphasizing it more on location and make some other judgements it should also work well.
-
-3, test the codes on different languages
-- theoretically, EAST and tesserect works across all languages. I needs to be tested, and implement a machenism to switch to different detection models.
-
-4, format the results into Red Hen requirements.
-
