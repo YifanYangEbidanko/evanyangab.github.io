@@ -54,7 +54,7 @@ cd to that folder,
 
 and run:
 
-```cmd
+```python
 python3 run_demo_server.py --checkpoint_path models/east_icpr2018_resnet_v1_50_rbox_1035k/
 ```
 
