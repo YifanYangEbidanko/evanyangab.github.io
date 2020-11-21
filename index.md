@@ -9,7 +9,7 @@ This picture is the animated version of me in Feb 2020. I used to look exactly l
 
 ### Publications
 
-Jayaram Kancherla, **Yifan Yang**, Hyeyun Chae, Hector Corrada Bravo, Epiviz File Server: Query, Transform and Interactively Explore Data from Indexed Genomic Files, Bioinformatics, , btaa591, https://doi.org/10.1093/bioinformatics/btaa591
+Jayaram Kancherla, **Yifan Yang**, Hyeyun Chae, Hector Corrada Bravo, Epiviz File Server: Query, Transform and Interactively Explore Data from Indexed Genomic Files, Bioinformatics, btaa591, https://doi.org/10.1093/bioinformatics/btaa591
 
 ### More Information
 
