@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a undergraduate student at the University of Maryland, College Park.
+I am a PhD student at the University of Maryland, College Park. My current interest is on Natural Language Processing. More specifically, I am interested in explaining why models work, creating dataset that transfers well and understand common sense. 
 
 ### More Information
 
