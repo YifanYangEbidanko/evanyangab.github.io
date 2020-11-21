@@ -17,6 +17,9 @@ I play drums, sometimes guitars.
 
 I used to be a heavy gamer (maybe still is). I solo qued top 500 NA in Rainbow Six Siege when it was still enjoyable, but now the devs destroyed the game.
 
+### CV
+
+[Here.]({{ site.url }}/assets/cv.pdf)
 
 ### Contact me
 
